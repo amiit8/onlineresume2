@@ -1,0 +1,44 @@
+<div class="quiz-layout">
+	{{#if currentQuestion}}
+		<div class="question">
+			<div class="question-wrapper">
+				{{ questionNumber }}. {{ currentQuestion.question }}
+			</div>
+		</div>
+		<div class="options">
+			<div class="options-wrapper">
+				{{#each currentQuestion.options}}
+					<input type="radio" name="options" value="{{ @key }}" id="{{ @key }}"></input>
+					<label for="{{ @key }}">{{ this }}</label>
+				{{/each}}
+			</div>
+		</div>
+	{{else}}
+		{{#if score}}
+			<div class="score-message">
+				<div class="score">Your score is {{ score }}. Click on start to take the quiz again</div>
+			</div>
+		{{else}}
+			<div class="message">
+				<div class="message-wrapper">
+					Welcome to Light Quiz. Please click on start to check you general knowledge.
+				</div>
+			</div>
+		{{/if}}
+	{{/if}}
+	<div class="buttons">
+		{{#if lastQuestion}}
+			<div class="btn-close">
+				<button value="end">End Quiz</button>
+			</div>
+		{{else if currentQuestion}}
+			<div class="btn-next">
+				<button value="next">Next</button>
+			</div>
+		{{else}}
+			<div class="btn-start">
+				<button value="start">Start</button>
+			</div>
+		{{/if}}
+	</div>
+</div>

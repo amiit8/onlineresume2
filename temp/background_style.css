@@ -1,0 +1,89 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+.main {
+	background-image: url("./images/background.jpg");
+}
+
+img.background {
+	width: 100%;
+	z-index: -1;
+}
+
+nav.menu {
+	text-align: center;
+	position: fixed;
+	margin-top: -700px;
+	width: 75%;
+	left: 50%;
+	margin-left: -37.5%;
+}
+svg.navigation {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -480px;
+	/*border: 1px solid gray;*/
+}
+
+svg.navigation circle.center {
+	cx:300; 
+	cy:300; 
+	r:280; 
+	fill:none; 
+	stroke:black; 
+	stroke-width:10; 
+	stroke-opacity:.5; 
+	opacity:.7;
+}
+
+svg.navigation circle.item {
+	r:50;
+	fill:black;
+	opacity:.5;
+	cursor: pointer;
+}
+
+svg.navigation circle.item:hover {
+	opacity: .4;
+}
+
+svg.navigation circle.item1 {
+	cx:50;
+	cy:550;
+}
+
+svg.navigation circle.item2 {
+	cx:200;
+	cy:650;
+}
+
+svg.navigation circle.item3 {
+	cx:400;
+	cy:650;
+}
+
+svg.navigation circle.item4 {
+	cx:550;
+	cy:550;
+}
+
+.modal {
+	height: 500px;
+	margin-top: 100px;
+	opacity: .3;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-align: center;
+	position: fixed;
+	margin-top: 100px;
+	width: 75%;
+	left: 50%;
+	margin-left: -37.5%;
+	background-color: white;
+}
+
+.modal .close-btn {
+	text-align: right;
+	padding: 10px;
+}

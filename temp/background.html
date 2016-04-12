@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Background</title>
+	<link rel="stylesheet" type="text/css" href="background_style.css">
+</head>
+<body>
+	<!-- <div id="loader">LOADING...</div> -->
+	<script type="text/javascript">
+		var loader = document.getElementById('loader');
+		// content.style.display = 'none';
+		window.onload = function(){
+			var content = document.getElementById('content');
+			//loader.style.display = 'none';
+			content.style.display = 'block';
+		};
+	</script>
+	<div id="content">
+		<div class="modal" id="contact" style="display:none">	
+			<div class="close-btn">Close</div>
+		</div>
+		<img class="background" src="./images/background.jpg"></img>
+		<!-- <video src="./images/video.mp4" width="100%" autoplay muted loop></video> -->
+		<nav class="menu">
+			<svg class="navigation" width="600" height="750">
+				<circle class="center"/>
+				<circle class="item item1" />
+				<circle class="item item2" />
+				<circle class="item item3" />
+				<circle class="item item4" />
+			</svg>
+		</nav>
+		<script type="text/javascript">
+			var items = document.getElementsByClassName('item');
+			items[0].addEventListener('click', function(){
+				console.log('clicked');
+				var modal = document.getElementById('contact').style.display = "block";
+			});
+		</script>
+	</div>
+</body>
+</html>
