@@ -22,7 +22,7 @@ define(function(require, exports, module){
 			widgetAction: '#widget-action'
 		},
 		ui:{
-			'closeMain' : '#widget-action .close-icon'
+			'closeMain' : '#widget-action .glyphicon-remove'
 		},
 		events: {
 			'click @ui.closeMain' : 'closeMainView'

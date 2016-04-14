@@ -22,12 +22,12 @@ define(function(require, exports, module){
 			'click @ui.loadwidget' : 'loadwidget',
 			'click @ui.widgetButton' : 'loadwidget'
 		},
-		tagName: 'li',
-		className: 'widget',
+		tagName: 'button',
+		className: 'widget list-group-item',
 		loadwidget: function(event){
 			var target = event.currentTarget;
 			appChannel.trigger('load:widget', this.model.get('widgetName'));
-			this.$el.addClass('open');
+			this.$el.addClass('active');
 		}
 	});
 	return WidgetListChildView;

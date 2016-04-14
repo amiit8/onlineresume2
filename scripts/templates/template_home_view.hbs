@@ -1,19 +1,27 @@
-<div class="resume demo">
-	<div class="basic-info col1">
-		<div class="photo">
-			<img src="{{ profileImage }}" alt="Profile Picture" />
+<div class="resume demo jumbotron">
+	<div class="basic-info">
+		<div class="photo col-md-6 col-xs-12">
+			<img class="img-upscale img-thumbnail img-responsive" src="{{ profileImage2 }}" alt="Profile Picture" />
 		</div>
-		<div class="info">
-			<div class="name">{{ name }}</div>
-			<div class="work">{{ work }}</div>
+		<div class="info col-md-6 col-xs-12">
+			<h1 class="name text-center">{{ name }}</h1>
+			<div class="profile-summary text-justify">
+				<p>
+					{{ summaryPart1 }}
+				</p>
+				<p>
+					{{ summaryPart2}}
+				</p>
+				<p>
+					{{ summaryPart3}}
+				</p>
+			</div> {{!-- end of profile-summary --}}
+			<div class="buttons text-center">
+				<button type="button" class="btn btn-lg btn-primary skills">Checkout my skill set</button>
+			</div>
 		</div> {{!-- end of info --}}
+		<div class="clearfix"></div>
 	</div> {{!-- end of basic-info --}}
-	<div class="separator">
-		
-	</div>
-	<div class="profile-summary col2">
-		<div class="profile-summary-wrapper">
-			{{ summary }}
-		</div>
-	</div> {{!-- end of profile-summary --}}
+	
+
 </div>

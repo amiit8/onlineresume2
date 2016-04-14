@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #111;
+  background-image: url('../images/bg-pattern-grey.jpg');
+}
+a{
+	color: white;
+}
+a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+ul{
+	padding:0;
+}
+
+.navbar ul.item {
+	font-size: 1.2em;
+}
+
+.resume.jumbotron {
+	background-image: url('../images/bg-pattern-check.jpg');
+}
+.jumbotron .profile-summary {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 1.5em;
+}
+.img-upscale{
+	width: 100%;
+}	
+ul.skills {
+	overflow: auto;
+}
+.skill-item {
+	padding: 0;
+	cursor: pointer;
+}
+.skill-item .panel.no-touch:hover {
+	background-color: #fff;
+}
+.skill-item p{
+	font-size: .7em;
+}
+
+.skill-item .exp {
+	font-style: italic;
+}
+
+.skill-item .photo {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.skill-item .panel {
+	border: 0;
+	margin: 0;
+	border-radius: 0;
+}
+.skill-item img {
+	display: inline;
+	height: 100px;
+}
+.skill-item .panel-body{
+	height: 400px;
+}
+.skill-item .panel-heading {
+	border:0;
+	background-color: inherit;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.skill-item .panel-body {
+	font-size: 1.5em;
+}
+
+.skill-item .tags {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 15px;
+}
+
+.skill-item .tag {
+	display: inline-block;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-right: 5px;
+	padding-left: 5px;
+	font-size: .6em;
+	margin-bottom: 0;
+	border:0; 
+}
+
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+.bg-pink{
+	background-color: #ff6861;
+}
+.bg-red{
+	background-color: #ff2947;
+}
+.bg-teal{
+	background-color: #00ead0;
+}
+.bg-light-blue {
+	background-color: #0ab9ff;
+}
+.bg-purple {
+	background-color: #814efa;
+}
+
+.carousel-generic {
+	height: 100px;
+}
+
+.quiz-layout label {
+	cursor: pointer;
+}
+
+.demo .widget-action{
+	color:white;
+	font-size: 1.5em;
+}
+.demo .widget-button {
+	font-size: 2em;
+	cursor: pointer;
+}
+.demo .widget-button .glyphicon {
+	margin-top: 25%;
+	margin-bottom: 25%;
+}

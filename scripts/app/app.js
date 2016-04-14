@@ -2,8 +2,10 @@
 
 define(function(require, exports, module){
 	var $ = require("jquery");
+	var jQuery = require("jquery");
 	var _ = require("underscore");
 	var backbone = require("backbone");
+	var bootstrap = require("bootstrap");
 	var marionette = require("marionette"); 
 	var radio = require("radio"); 
 	var LayoutView = require("scripts/layout/layout"); 
@@ -25,6 +27,7 @@ define(function(require, exports, module){
 
 			app.on('start', function(){
 				backbone.history.start();
+				$('.window-loader').hide();
 			});
 
 			appChannel.on('route:change', function(){

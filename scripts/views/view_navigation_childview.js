@@ -12,10 +12,10 @@ define(["backbone","marionette", "handlebars", "text!scripts/templates/template_
 		initialize: function() {
 			var currentPage = backbone.history.getFragment();
 			if(this.model.get('link') === currentPage){
-				this.$el.addClass('selected');
+				this.$el.addClass('active');
 			}
 			else {
-				this.$el.removeClass('selected');	
+				this.$el.removeClass('active');	
 			}
 		},
 		clickmenuitem: function() {

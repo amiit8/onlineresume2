@@ -18,7 +18,7 @@ define(function(require, exports, module){
 			'parent': this
 		},
 		deselectAll: function(){
-			this.$('li.widget').removeClass('open');
+			this.$('button.widget').removeClass('active');
 		},
 		childView: WidgetListChildView,
 		childViewContainer: 'ul.widgets',

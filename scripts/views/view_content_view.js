@@ -10,6 +10,7 @@ define(function(require, exports, module){
 	var DemoLayoutView = require('scripts/views/view_demo_layout_view');
 	var ResumeView = require('scripts/views/view_resume_view');
 	var ResumeModel = require('scripts/models/model_resume_view');
+	var ResumeCollection = require('scripts/collections/collection_resume_view');
 	var HomeView = require('scripts/views/view_home_view');
 	var HomeModel = require('scripts/models/model_home_view');
 	var appChannel = radio.channel('appChannel');
@@ -38,8 +39,10 @@ define(function(require, exports, module){
 				// Create Resume view if URL contains resume
 				else if(currentPage === 'skills') {
 					var resumeModel = new ResumeModel(Mockdata.resume_model_data);
+					var resumeCollection = new ResumeCollection(resumeModel.get('skills'));
 					var resumeView = new ResumeView({
-						model: resumeModel
+						model: resumeModel,
+						collection: resumeCollection
 					});
 					this.contentBaseRegion.show(resumeView, {preventDestroy:true});
 				}

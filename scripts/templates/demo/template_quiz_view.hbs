@@ -1,44 +1,34 @@
-<div class="quiz-layout">
+<div class="quiz-layout panel panel-primary">
 	{{#if currentQuestion}}
-		<div class="question">
-			<div class="question-wrapper">
+		<div class="question panel-heading">
 				{{ questionNumber }}. {{ currentQuestion.question }}
-			</div>
 		</div>
-		<div class="options">
-			<div class="options-wrapper">
+		<div class="options panel-body">
 				{{#each currentQuestion.options}}
+				<div class="option col-xs-12 col-sm-3">
 					<input type="radio" name="options" value="{{ @key }}" id="{{ @key }}"></input>
 					<label for="{{ @key }}">{{ this }}</label>
+				</div>
 				{{/each}}
-			</div>
 		</div>
 	{{else}}
 		{{#if score}}
-			<div class="score-message">
-				<div class="score">Your score is {{ score }}. Click on start to take the quiz again</div>
+			<div class="score-message alert alert-success">
+				Your score is {{ score }}. Click on start to take the quiz again
 			</div>
 		{{else}}
-			<div class="message">
-				<div class="message-wrapper">
-					Welcome to Light Quiz. Please click on start to check you general knowledge.
-				</div>
+			<div class="message alert alert-info">
+				Welcome to Light Quiz. Please click on start to check you general knowledge.
 			</div>
 		{{/if}}
 	{{/if}}
-	<div class="buttons">
+	<div class="buttons panel-body text-center">
 		{{#if lastQuestion}}
-			<div class="btn-close">
-				<button value="end">End Quiz</button>
-			</div>
+			<button class="btn btn-close btn-primary" value="end">End Quiz</button>
 		{{else if currentQuestion}}
-			<div class="btn-next">
-				<button value="next">Next</button>
-			</div>
+			<button class="btn btn-next btn-primary"> Next </button>
 		{{else}}
-			<div class="btn-start">
-				<button value="start">Start</button>
-			</div>
+			<button class="btn btn-start btn-primary"> Start </div>
 		{{/if}}
 	</div>
 </div>

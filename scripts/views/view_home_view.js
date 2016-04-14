@@ -8,7 +8,16 @@ define(function(require, exports, module){
 	var HomeViewTemplate = require("text!scripts/templates/template_home_view.hbs");
 
 	var HomeView = marionette.ItemView.extend({
-		template: Handlebars.compile(HomeViewTemplate)
+		template: Handlebars.compile(HomeViewTemplate),
+		ui: {
+			'btnSkills' : 'button.skills'
+		},
+		events: {
+			'click @ui.btnSkills' : 'navigateToSkills'
+		},
+		navigateToSkills: function(){
+			backbone.history.navigate('#skills', {trigger : true});
+		}
 	});
 	return HomeView;
 });

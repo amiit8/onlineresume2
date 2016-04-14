@@ -1,27 +1,21 @@
-<svg class="close-navigation-icon" height="50px" width="50px">
-	<line x1="15" y1="35" x2="35" y2="15"/>
-	<line x1="15" y1="15" x2="35" y2="35"/>
-</svg>
-<div class="mobile-menu-wrapper">
-	<div class="mobile-menu">
-		<svg class="menu-icon" height="50px" width="50px">
-			<line x1="10" y1="15" x2="40" y2="15"/>
-			<line x1="10" y1="25" x2="40" y2="25"/>
-			<line x1="10" y1="35" x2="40" y2="35"/>
-		</svg>
-		<div class="current-page">
-			<div class="text">{{ currentPage }}</div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="navbar-brand">
+				<a href="#home">
+			  	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			  </a>
+			</div>
 		</div>
-		<input class="input-box hidden"></input>
-		<svg class="search-icon" height="50px" width="50px">
-			<line x1="10" y1="40" x2="20" y2="30"/>
-			<circle cx="25" cy="25" r="10" />
-		</svg>
-		<svg class="close-icon hidden" height="50px" width="50px">
-			<line x1="15" y1="35" x2="35" y2="15"/>
-			<line x1="15" y1="15" x2="35" y2="35"/>
-		</svg>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="links nav navbar-nav"></ul>
+		</div>
 	</div>
 </div>
-<ul class="links"></ul>
 
