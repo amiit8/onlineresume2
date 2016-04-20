@@ -25228,7 +25228,31 @@ define('scripts/data/mockdata',[], function(){
 			profileImage2: 'images/profileImage2.jpg',
 			summaryPart1: 'Hi, I am a front-end Developer with more than 4 years of experience in Software Development. ',
 			summaryPart2: 'I have experience in building responsive websites which work seamlessly on desktop and mobile devices. ',
-			summaryPart3: 'I am a Computer Science graduate from RGPV University. Currently I am working with a Multi-National IT company as a Front-End Developer.'
+			summaryPart3: 'I am a Computer Science graduate from RGPV University. Currently I am working with a Multi-National IT company as a Front-End Developer.',
+			segment: [
+				{
+					segment:'segment1',
+					text1: 'Who am I?', 
+					text2: 'I am a UI Developer', 
+					image:'./images/profileImage2.jpg',
+					nextSegment:'segment2',
+					bgColor: 'bg-pink',
+				},
+				{
+					segment:'segment2',
+					text1: 'What I Do?', 
+					text2: 'I convert designs to reality', 
+					image:'./images/profileImage2.jpg',
+					nextSegment:'segment3',
+					bgColor: 'bg-light-blue'},
+				{
+					segment:'segment3',
+					text1: 'Wanna connect with me?',
+					text2: '+91-9XXXXXXXX',  
+					image:'./images/profileImage2.jpg',
+					nextSegment:'',
+					bgColor: 'bg-purple'}
+			]
 		},
 
 		content_model_data : {
@@ -25320,7 +25344,7 @@ define('scripts/data/mockdata',[], function(){
 	};
 });
 
-define('text!scripts/templates/template_content_view.hbs',[],function () { return '<div id="content-base" class="content container"></div>';});
+define('text!scripts/templates/template_content_view.hbs',[],function () { return '<div id="content-base" class="content container-fluid"></div>';});
 
 define('scripts/utils/mobileutils',['require','exports','module','jquery','underscore','backbone','marionette'],function(require, exports, module){
 	var $ = require("jquery");
@@ -25353,7 +25377,7 @@ define('text!scripts/templates/template_demo_layout_view.hbs',[],function () { r
 define('text!scripts/templates/template_widgetlist_view.hbs',[],function () { return '<ul class="widgets list-group"></ul>';});
 
 
-define('text!scripts/templates/template_widgetlist_childview.hbs',[],function () { return '\r\n\t<div class="widget-details col-xs-10">\r\n\t\t<div class="widget-name list-group-item-heading"><strong>{{ widgetName }}</strong></div>\r\n\t\t<div class="widget-description list-group-item-text">{{ description }}</div>\r\n\t</div>\r\n\t<div class="widget-button col-xs-2">\r\n\t\t<span class="glyphicon glyphicon-play-circle" aria-hidden="false"></span>\r\n\t</div>\r\n\t<div class="clearfix"></div>\r\n';});
+define('text!scripts/templates/template_widgetlist_childview.hbs',[],function () { return '<div class="widget-details col-xs-10">\r\n\t<div class="widget-name list-group-item-heading"><strong>{{ widgetName }}</strong></div>\r\n\t<div class="widget-description list-group-item-text">{{ description }}</div>\r\n</div>\r\n<div class="widget-button col-xs-2">\r\n\t<span class="glyphicon glyphicon-play-circle" aria-hidden="false"></span>\r\n</div>\r\n<div class="clearfix"></div>\r\n';});
 
 define('scripts/views/view_widgetlist_childview',['require','exports','module','jquery','underscore','backbone','marionette','radio','handlebars','text!scripts/templates/template_widgetlist_childview.hbs'],function(require, exports, module){
 	var $ = require("jquery");
@@ -25428,7 +25452,7 @@ define('scripts/collections/collection_widgetlist_view',["backbone"], function(b
 });
 
 
-define('text!scripts/templates/demo/template_quiz_view.hbs',[],function () { return '<div class="quiz-layout panel panel-primary">\r\n\t{{#if currentQuestion}}\r\n\t\t<div class="question panel-heading">\r\n\t\t\t\t{{ questionNumber }}. {{ currentQuestion.question }}\r\n\t\t</div>\r\n\t\t<div class="options panel-body">\r\n\t\t\t\t{{#each currentQuestion.options}}\r\n\t\t\t\t<div class="option col-xs-12 col-sm-3">\r\n\t\t\t\t\t<input type="radio" name="options" value="{{ @key }}" id="{{ @key }}"></input>\r\n\t\t\t\t\t<label for="{{ @key }}">{{ this }}</label>\r\n\t\t\t\t</div>\r\n\t\t\t\t{{/each}}\r\n\t\t</div>\r\n\t{{else}}\r\n\t\t{{#if score}}\r\n\t\t\t<div class="score-message alert alert-success">\r\n\t\t\t\tYour score is {{ score }}. Click on start to take the quiz again\r\n\t\t\t</div>\r\n\t\t{{else}}\r\n\t\t\t<div class="message alert alert-info">\r\n\t\t\t\tWelcome to Light Quiz. Please click on start to check you general knowledge.\r\n\t\t\t</div>\r\n\t\t{{/if}}\r\n\t{{/if}}\r\n\t<div class="buttons panel-body text-center">\r\n\t\t{{#if lastQuestion}}\r\n\t\t\t<button class="btn btn-close btn-primary" value="end">End Quiz</button>\r\n\t\t{{else if currentQuestion}}\r\n\t\t\t<button class="btn btn-next btn-primary"> Next </button>\r\n\t\t{{else}}\r\n\t\t\t<button class="btn btn-start btn-primary"> Start </div>\r\n\t\t{{/if}}\r\n\t</div>\r\n</div>';});
+define('text!scripts/templates/demo/template_quiz_view.hbs',[],function () { return '<div class="quiz-layout panel panel-primary">\r\n\t{{#if currentQuestion}}\r\n\t\t<div class="question panel-heading">\r\n\t\t\t\t{{ questionNumber }}. {{ currentQuestion.question }}\r\n\t\t</div>\r\n\t\t<div class="options panel-body">\r\n\t\t\t\t{{#each currentQuestion.options}}\r\n\t\t\t\t<div class="option col-xs-12 col-sm-3">\r\n\t\t\t\t\t<input type="radio" name="options" value="{{ @key }}" id="{{ @key }}"></input>\r\n\t\t\t\t\t<label for="{{ @key }}">{{ this }}</label>\r\n\t\t\t\t</div>\r\n\t\t\t\t{{/each}}\r\n\t\t</div>\r\n\t{{else}}\r\n\t\t{{#if score}}\r\n\t\t\t<div class="score-message alert alert-success">\r\n\t\t\t\tYour score is {{ score }}. Click on start to take the quiz again\r\n\t\t\t</div>\r\n\t\t{{else}}\r\n\t\t\t<div class="message alert alert-info">\r\n\t\t\t\tWelcome to Light Quiz. Please click on start to check you general knowledge.\r\n\t\t\t</div>\r\n\t\t{{/if}}\r\n\t{{/if}}\r\n\t<div class="buttons panel-body text-center">\r\n\t\t{{#if lastQuestion}}\r\n\t\t\t<button class="btn btn-close btn-primary" value="end">End Quiz</button>\r\n\t\t{{else if currentQuestion}}\r\n\t\t\t<button class="btn btn-next btn-primary"> Next </button>\r\n\t\t{{else}}\r\n\t\t\t<button class="btn btn-start btn-primary"> Start </button>\r\n\t\t{{/if}}\r\n\t</div>\r\n</div>';});
 
 define('scripts/models/demo/model_quiz_view',["backbone"], function(backbone){
 	var QuestionsModel = backbone.Model.extend();
@@ -25636,7 +25660,7 @@ define('scripts/views/view_demo_layout_view',['require','exports','module','jque
 define('text!scripts/templates/template_resume_view.hbs',[],function () { return '<ul class="skills"></ul>';});
 
 
-define('text!scripts/templates/template_resume_childview.hbs',[],function () { return '\r\n<div class="skill-item col-md-4 col-sm-6 col-xs-12">\r\n\t<div class="panel panel-default {{bgColor}} {{#if isNoTouch}}no-touch{{/if}}">\r\n\t\t<div class="panel-heading" {{#if isNotMobile}}data-toggle=""{{else}}data-toggle="collapse"{{/if}} data-target="#{{skillID}}">\r\n\t\t\t<h7>{{ skillName }}</h7>\r\n\t\t</div>\r\n\t\t<div id="{{skillID}}" class="panel-body collapse in">\r\n\t\t\t<p class="exp">Have been using for <strong>{{ experience }}</strong> months.</p>\r\n\t\t\t<div class="photo text-center">\r\n\t\t\t\t<img class="img-responsive" src="images/{{skillImage}}">\r\n\t\t\t</div>\r\n\t\t\t<p class="projects">{{ projects }}</p>\r\n\t\t\t<div class="tags">\r\n\t\t\t{{#each subsets}}\r\n\t\t\t\t<span class="alert alert-warning tag">{{ this }}</span>\r\n\t\t\t{{/each}}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';});
+define('text!scripts/templates/template_resume_childview.hbs',[],function () { return '\r\n<div class="skill-item col-md-4 col-sm-6 col-xs-12">\r\n\t<div class="panel panel-default {{bgColor}} {{#if isNoTouch}}no-touch{{/if}}">\r\n\t\t<div class="panel-heading" {{#if isNotMobile}} {{else}} data-toggle="collapse" {{/if}} data-target="#{{skillID}}">\r\n\t\t\t<h7>{{ skillName }}</h7>\r\n\t\t</div>\r\n\t\t<div id="{{skillID}}" class="panel-body collapse in">\r\n\t\t\t<p class="exp">Have been using for <strong>{{ experience }}</strong> months.</p>\r\n\t\t\t<div class="photo text-center">\r\n\t\t\t\t<img class="img-responsive" src="images/{{skillImage}}">\r\n\t\t\t</div>\r\n\t\t\t<p class="projects">{{ projects }}</p>\r\n\t\t\t<div class="tags">\r\n\t\t\t{{#each subsets}}\r\n\t\t\t\t<span class="alert alert-warning tag">{{ this }}</span>\r\n\t\t\t{{/each}}\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';});
 
 define('scripts/views/view_resume_childview',['require','exports','module','jquery','underscore','backbone','marionette','radio','handlebars','scripts/utils/mobileutils','text!scripts/templates/template_resume_childview.hbs'],function(require, exports, module){
 	var $ = require("jquery");
@@ -25739,7 +25763,7 @@ define('scripts/collections/collection_resume_view',["backbone"], function(backb
 });
 
 
-define('text!scripts/templates/template_home_view.hbs',[],function () { return '<div class="resume demo jumbotron">\r\n\t<div class="basic-info">\r\n\t\t<div class="photo col-md-6 col-xs-12">\r\n\t\t\t<img class="img-upscale img-thumbnail img-responsive" src="{{ profileImage2 }}" alt="Profile Picture" />\r\n\t\t</div>\r\n\t\t<div class="info col-md-6 col-xs-12">\r\n\t\t\t<h1 class="name text-center">{{ name }}</h1>\r\n\t\t\t<div class="profile-summary text-justify">\r\n\t\t\t\t<p>\r\n\t\t\t\t\t{{ summaryPart1 }}\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>\r\n\t\t\t\t\t{{ summaryPart2}}\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>\r\n\t\t\t\t\t{{ summaryPart3}}\r\n\t\t\t\t</p>\r\n\t\t\t</div> {{!-- end of profile-summary --}}\r\n\t\t\t<div class="buttons text-center">\r\n\t\t\t\t<button type="button" class="btn btn-lg btn-primary skills">Checkout my skill set</button>\r\n\t\t\t</div>\r\n\t\t</div> {{!-- end of info --}}\r\n\t\t<div class="clearfix"></div>\r\n\t</div> {{!-- end of basic-info --}}\r\n\t\r\n\r\n</div>';});
+define('text!scripts/templates/template_home_view.hbs',[],function () { return '<div class="resume demo">\r\n\t<div class="basic-info">\r\n\t{{#each segment}}\r\n\t\t<div id="{{segment}}" class="col-xs-12  text-center segment {{bgColor}}">\r\n\t\t\t<div class="text col-xs-12 text-center">\r\n\t\t\t\t<h3> {{text1}} </h3>\r\n\t\t\t</div>\r\n\t\t\t<div class="photo col-xs-12">\r\n\t\t\t\t<img class="img-responsive img-circle center-block" src="{{image}}"></img>\r\n\t\t\t</div>\r\n\t\t\t<div class="text col-xs-12 text-center">\r\n\t\t\t\t<h3> {{text2}} </h3>\r\n\t\t\t</div>\r\n\t\t\t<span class="down-icon glyphicon glyphicon-chevron-down" data-next-segment="#{{nextSegment}}" aria-hidden="false"></span>\r\n\t\t</div>\r\n\t{{/each}}\r\n\t</div> {{!-- end of basic-info --}}\r\n</div>';});
 
 define('scripts/views/view_home_view',['require','exports','module','jquery','underscore','backbone','marionette','radio','handlebars','text!scripts/templates/template_home_view.hbs'],function(require, exports, module){
 	var $ = require("jquery");
@@ -25753,13 +25777,29 @@ define('scripts/views/view_home_view',['require','exports','module','jquery','un
 	var HomeView = marionette.ItemView.extend({
 		template: Handlebars.compile(HomeViewTemplate),
 		ui: {
-			'btnSkills' : 'button.skills'
+			'btnSkills' : 'button.skills',
+			'downIcon' : '.down-icon'
 		},
 		events: {
-			'click @ui.btnSkills' : 'navigateToSkills'
+			'click @ui.btnSkills' : 'navigateToSkills',
+			'click @ui.downIcon' : 'clickDownIcon'
+		},
+		onRender: function(){
+			this.$('.segment').height(window.innerHeight);
+
+		},
+		onShow: function(){
+			// var nextElement = $('#segment1');
+			// $('html,body').animate({scrollTop:nextElement.position().top + 50});
 		},
 		navigateToSkills: function(){
 			backbone.history.navigate('#skills', {trigger : true});
+		},
+		clickDownIcon: function(event) {
+			var element = event.currentTarget;
+			var nextSegment = element.dataset.nextSegment;
+			var nextElement = $(nextSegment);
+			$('html,body').animate({scrollTop:nextElement.position().top-50	});
 		}
 	});
 	return HomeView;
