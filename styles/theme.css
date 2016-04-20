@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
   background-color: #111;
@@ -16,13 +16,41 @@ a:visited, a:hover, a:active {
 ul{
 	padding:0;
 }
-
+.down-icon {
+	font-size: 50px;
+}
+.down-icon:hover {
+	color: #fff;
+}
+.full-height {
+	height:100vh;
+}
 .navbar ul.item {
 	font-size: 1.2em;
 }
 
-.resume.jumbotron {
-	background-image: url('../images/bg-pattern-check.jpg');
+.segment .text {
+	margin: 5% 0 5% 0;
+}
+.segment h3{
+	font-size: 2em;
+	font-family: 'Open Sans', sans-serif;
+}
+/*.segment .photo img{
+	width: 50%;
+}*/
+@media all and (orientation:portrait) {
+    /* Styles for Portrait screen */
+}
+@media all and (orientation:landscape) {
+    /* Styles for Landscape screen */
+}
+.segment .photo img{
+	width: 10em
+}
+.content.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
 }
 .jumbotron .profile-summary {
 	margin-top: 25px;

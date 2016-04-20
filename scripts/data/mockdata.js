@@ -150,7 +150,31 @@ define([], function(){
 			profileImage2: 'images/profileImage2.jpg',
 			summaryPart1: 'Hi, I am a front-end Developer with more than 4 years of experience in Software Development. ',
 			summaryPart2: 'I have experience in building responsive websites which work seamlessly on desktop and mobile devices. ',
-			summaryPart3: 'I am a Computer Science graduate from RGPV University. Currently I am working with a Multi-National IT company as a Front-End Developer.'
+			summaryPart3: 'I am a Computer Science graduate from RGPV University. Currently I am working with a Multi-National IT company as a Front-End Developer.',
+			segment: [
+				{
+					segment:'segment1',
+					text1: 'Who am I?', 
+					text2: 'I am a UI Developer', 
+					image:'./images/profileImage2.jpg',
+					nextSegment:'segment2',
+					bgColor: 'bg-pink',
+				},
+				{
+					segment:'segment2',
+					text1: 'What I Do?', 
+					text2: 'I convert designs to reality', 
+					image:'./images/profileImage2.jpg',
+					nextSegment:'segment3',
+					bgColor: 'bg-light-blue'},
+				{
+					segment:'segment3',
+					text1: 'Wanna connect with me?',
+					text2: '+91-9XXXXXXXX',  
+					image:'./images/profileImage2.jpg',
+					nextSegment:'',
+					bgColor: 'bg-purple'}
+			]
 		},
 
 		content_model_data : {

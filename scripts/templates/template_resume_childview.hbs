@@ -1,7 +1,7 @@
 
 <div class="skill-item col-md-4 col-sm-6 col-xs-12">
 	<div class="panel panel-default {{bgColor}} {{#if isNoTouch}}no-touch{{/if}}">
-		<div class="panel-heading" {{#if isNotMobile}}data-toggle=""{{else}}data-toggle="collapse"{{/if}} data-target="#{{skillID}}">
+		<div class="panel-heading" {{#if isNotMobile}} {{else}} data-toggle="collapse" {{/if}} data-target="#{{skillID}}">
 			<h7>{{ skillName }}</h7>
 		</div>
 		<div id="{{skillID}}" class="panel-body collapse in">

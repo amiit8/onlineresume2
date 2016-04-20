@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title>Amit Upadhyay - UI Developer Portfolio</title>
-	<meta content="width=device-width,minimum-scale=1.0" name="viewport">
-	<meta name="description" content="Amit Upadhyay - UI Developer Portfolio">
-	<meta name="keywords" content="Amit Upadhyay, Portfolio, Template, Theme, web, html5, css3, Bootstrap, UI developer, backbone ,marionette">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0" >
+	<meta name="description" content="Amit Upadhyay - UI Developer | India | Checkout the Personal portfolio of Amit Upadhyay. Amit is a frontend developer with more than 4 years of professional experience with multi national companies. He works primarily in HTML5, CSS, Javascript, backbone and marionette.">
+	<meta name="keywords" content="Amit Upadhyay, Portfolio, Template, Theme, web, html5, css3, Bootstrap, UI developer, backbone ,marionette, amiit8, front-end, software developer, user interface, india, mumbai, pune, web developer, handlebars">
 	<meta name="author" content="Amit Upadhyay">
-	
+	<mera charset="UTF-8">
 	<link href="node_modules\bootstrap\dist\css\bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="styles\theme.css">
 
@@ -18,7 +18,20 @@
     <![endif]-->
 </head>
 <body role="document">
-<div class="window-loader" style="text-align:center;position:fixed;width:75%;left:50%;margin-left:-37.5%;color:white;font-size:1em;">Loading application...</div>
+
+<div id="window-loader" class="window-loader" style="text-align:center;position:fixed;width:75%;left:50%;margin-left:-37.5%;color:white;font-size:1em;">
+	<div id="loader-icon" class="glyphicon glyphicon-repeat"></div>
+	Loading application...
+</div>
+<script type="text/javascript">
+	var loader = document.getElementById('loader-icon');
+	var angle=0;
+	setInterval(function(){
+		angle = angle > 330 ? 0 : angle + 30;
+		loader.style.transform ="rotate(" + angle + "deg)";
+	}, 100);
+	
+</script>
 	<div class="main">
 		<!-- <div id="header-region" class="box"></div> -->
 		<div id="navigation-region" class="box"></div>

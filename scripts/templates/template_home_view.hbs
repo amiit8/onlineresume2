@@ -1,27 +1,18 @@
-<div class="resume demo jumbotron">
+<div class="resume demo">
 	<div class="basic-info">
-		<div class="photo col-md-6 col-xs-12">
-			<img class="img-upscale img-thumbnail img-responsive" src="{{ profileImage2 }}" alt="Profile Picture" />
-		</div>
-		<div class="info col-md-6 col-xs-12">
-			<h1 class="name text-center">{{ name }}</h1>
-			<div class="profile-summary text-justify">
-				<p>
-					{{ summaryPart1 }}
-				</p>
-				<p>
-					{{ summaryPart2}}
-				</p>
-				<p>
-					{{ summaryPart3}}
-				</p>
-			</div> {{!-- end of profile-summary --}}
-			<div class="buttons text-center">
-				<button type="button" class="btn btn-lg btn-primary skills">Checkout my skill set</button>
+	{{#each segment}}
+		<div id="{{segment}}" class="col-xs-12  text-center segment {{bgColor}}">
+			<div class="text col-xs-12 text-center">
+				<h3> {{text1}} </h3>
 			</div>
-		</div> {{!-- end of info --}}
-		<div class="clearfix"></div>
+			<div class="photo col-xs-12">
+				<img class="img-responsive img-circle center-block" src="{{image}}"></img>
+			</div>
+			<div class="text col-xs-12 text-center">
+				<h3> {{text2}} </h3>
+			</div>
+			<span class="down-icon glyphicon glyphicon-chevron-down" data-next-segment="#{{nextSegment}}" aria-hidden="false"></span>
+		</div>
+	{{/each}}
 	</div> {{!-- end of basic-info --}}
-	
-
 </div>

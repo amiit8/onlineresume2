@@ -10,13 +10,29 @@ define(function(require, exports, module){
 	var HomeView = marionette.ItemView.extend({
 		template: Handlebars.compile(HomeViewTemplate),
 		ui: {
-			'btnSkills' : 'button.skills'
+			'btnSkills' : 'button.skills',
+			'downIcon' : '.down-icon'
 		},
 		events: {
-			'click @ui.btnSkills' : 'navigateToSkills'
+			'click @ui.btnSkills' : 'navigateToSkills',
+			'click @ui.downIcon' : 'clickDownIcon'
+		},
+		onRender: function(){
+			this.$('.segment').height(window.innerHeight);
+
+		},
+		onShow: function(){
+			// var nextElement = $('#segment1');
+			// $('html,body').animate({scrollTop:nextElement.position().top + 50});
 		},
 		navigateToSkills: function(){
 			backbone.history.navigate('#skills', {trigger : true});
+		},
+		clickDownIcon: function(event) {
+			var element = event.currentTarget;
+			var nextSegment = element.dataset.nextSegment;
+			var nextElement = $(nextSegment);
+			$('html,body').animate({scrollTop:nextElement.position().top-50	});
 		}
 	});
 	return HomeView;
